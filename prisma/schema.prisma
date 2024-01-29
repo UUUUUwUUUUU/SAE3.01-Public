@@ -1,0 +1,35 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://Adrien:MonAspirateur123@uwu.mysql.database.azure.com:3306/Naturotheque"
+}
+
+model Membre {
+  id_membre          Int            @id @default(autoincrement())
+  userpassword       String         @db.VarChar(150)
+  email              String         @unique @db.VarChar(350)
+  isEmailVerified    Boolean        @default(false)
+  verification_token String?        @unique @db.VarChar(50)
+  created_at         DateTime       @default(now())
+  reset_token        String?        @unique @db.VarChar(50)
+  token_expire       DateTime?
+  archive_status     Boolean        @default(false)
+  Naturotheque       Naturotheque[]
+}
+
+model Naturotheque {
+  id_membre        Int
+  idtaxon          Int
+  added_at         DateTime @default(now())
+  notes            String?  @db.VarChar(750)
+  publicly_visible Boolean  @default(false)
+  membre           Membre   @relation(fields: [id_membre], references: [id_membre])
+
+  @@id([id_membre, idtaxon])
+}

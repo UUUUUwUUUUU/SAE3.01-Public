@@ -1,0 +1,197 @@
+/* Thème blanc */
+:root {
+  --background-color: #f0f0f2;
+  --text-color: #333;
+  --card-background-color: lightgray;
+
+  --modal-overlay-background: rgba(40, 40, 40, 0.8);
+  --modal-background: rgb(255, 255, 255);
+  --modal-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  --modal-input-background: #fff;
+  --bs-card-title-color: #ffffff;
+}
+
+/* Thème sombre */
+.dark {
+  --background-color: rgb(24, 24, 24);
+  --text-color: #fff;
+  --card-background-color: rgba(40, 40, 40, 0.8);
+
+  --modal-overlay-background: rgba(40, 40, 40, 0.8);
+  --modal-background: rgb(34, 34, 34);
+  --modal-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  --modal-input-background: #333;
+}
+
+/* Transition theme */
+.root,
+.navbar,
+.dark,
+body,
+footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Résultats recherche tax */
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12%, 1fr));
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Taxon card */
+.taxon-card {
+  background-color: var(--card-background-color);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Taxon détails */
+.taxon-details {
+  grid-row: 2;
+}
+
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--modal-overlay-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal */
+.modal {
+  display: flex;
+  flex-direction: column;
+  background: var(--modal-background) !important;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-height: 55%;
+  z-index: 1001;
+  box-shadow: 0 0 10px var(--modal-shadow);
+}
+
+.modal {
+  max-width: 90%; /* Default to phone size */
+}
+
+@media screen and (min-width: 300px) {
+  .search-phone {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    max-width: 70%; /* Tablet size */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modal {
+    max-width: 40%; /* PC size */
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal {
+    max-width: 20%; /* Large PC size */
+  }
+}
+
+.card > .list-group {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.navbar-phone {
+  flex-wrap: nowrap !important;
+}
+
+.modal-popUp {
+  display: flex;
+  flex-direction: column;
+  background: var(--modal-background) !important;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-height: 55%;
+  z-index: 1001;
+  box-shadow: 0 0 10px var(--modal-shadow);
+}
+
+/* Modal input */
+.modal input {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--modal-input-background);
+}
+
+/* Modal bouton close */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Images taxons */
+.card-img-top {
+  aspect-ratio: 640/427;
+  object-fit: cover;
+}
+
+/* Cartes */
+.card {
+  --bs-card-border-width: none;
+}
+
+/* Container */
+.container-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-app {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.container-app.dark-mode {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+}
