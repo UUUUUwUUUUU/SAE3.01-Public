@@ -8,7 +8,33 @@
 
 # SAE3.01-Adranth
 
-TEAM Adranth (Thomas &amp; Adrien &amp; Antoine) pour SAE 3.01
+> TEAM Adranth (Thomas, Adrien &amp; Antoine) ; SAE 3.01
+
+&nbsp;
+
+### 📌 Description
+MaNaturothèque is a NextJS web app that allows consultation of the fauna & flora using TaxRef™ API with a twist, the ability to create an account and favorite taxa to your personal area for further consultation.
+
+&nbsp;
+
+### 🔑 Key Features : 
+
+* #### **Taxa Related**
+    * Term & Language-Based Taxa Search (also adjustable with a rank filter)
+    * Taxa Image Scraping from INPN (when available)
+    * Detailed Taxa Information (provided by TaxRef)
+    * Personal / Favorite Area of saved Taxa (when connected)
+* #### **Account Related**
+    * Secure Account Creation
+        * Email verification
+        * Password encryption (using BycryptJS)
+        * Secure password enforcement
+    * Login with Session Management & Renewal
+    * Password Reset
+* #### **Additional Features**
+    * Switch between dark & light color themes
+    * Switch between French & English
+    * Responsive CSS to improve tablet & mobile experience
 
 &nbsp;
 
@@ -31,8 +57,8 @@ TEAM Adranth (Thomas &amp; Adrien &amp; Antoine) pour SAE 3.01
 
     ```env
     BASE_URL="http://localhost:3000/"
-    SECRET_COOKIE_PASSWORD="..."
-    SENDINBLUE_API_KEY="..."
+    SECRET_COOKIE_PASSWORD="..." // Can be generated using https://krenbot.github.io/pw-generator/
+    SENDINBLUE_API_KEY="..." // Need to create an account on https://www.brevo.com/
     ```
 
 4. Install the project dependencies by running:
@@ -68,7 +94,8 @@ TEAM Adranth (Thomas &amp; Adrien &amp; Antoine) pour SAE 3.01
      
     ```
 
-    **Note:** Closing Visual Studio Code will also close the npm dev server
+> [!NOTE]
+> Closing Visual Studio Code will also close the npm dev server.
 
 7. Open [http://localhost:3000/](http://localhost:3000/) in your browser to access the app
 
@@ -78,7 +105,8 @@ TEAM Adranth (Thomas &amp; Adrien &amp; Antoine) pour SAE 3.01
 
 ### Resetting Prisma Database
 
-⚠️ **Warning:** The following commands will reset your Prisma database. A prompt will ask for confirmation (y/n).
+> [!WARNING]
+> The following commands will reset your Prisma database. A prompt will ask for confirmation (y/n).
 
 1. Run the following commands:
 
@@ -96,7 +124,8 @@ TEAM Adranth (Thomas &amp; Adrien &amp; Antoine) pour SAE 3.01
 
 ### Performing a Clean Package Installation (node_modules reset)
 
-📌 This will delete your current `/node_modules` and reinstall the packages.
+> [!IMPORTANT]
+> This will delete your current `/node_modules` and reinstall the packages.
 
 1. Run the following command:
 
