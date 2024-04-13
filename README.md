@@ -4,7 +4,7 @@
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
 
-![SAE3.01-Logo](https://media.discordapp.net/attachments/712982120481554442/1201354774247899156/SAE_3.01_-_MaNaturotheque.png?ex=660a1d52&is=65f7a852&hm=93d6169fdfb258902619efd0b1ea11a804b68d995d002fc1ddbb56f0950b8ce6&=&format=webp&quality=lossless)
+![SAE3.01-Logo](/.github/images/banner.png)
 
 &nbsp;
 
@@ -15,28 +15,34 @@
 &nbsp;
 
 ### 📌 Description
+
 MaNaturothèque is a NextJS web app that allows consultation of the fauna & flora using TaxRef™ API with a twist, the ability to create an account and favorite taxa to your personal area for further consultation.
 
 &nbsp;
 
-### 🔑 Key Features : 
+### 🔑 Key Features
 
 * #### **Taxa Related**
-    * Term & Language-Based Taxa Search (also adjustable with a rank filter)
-    * Taxa Image Scraping from INPN (when available)
-    * Detailed Taxa Information (provided by TaxRef)
-    * Personal / Favorite Area of saved Taxa (when connected)
+
+  * Term & Language-Based Taxa Search (also adjustable with a rank filter)
+  * Taxa Image Scraping from INPN (when available)
+  * Detailed Taxa Information (provided by TaxRef)
+  * Personal / Favorite Area of saved Taxa (when connected)
+
 * #### **Account Related**
-    * Secure Account Creation
-        * Email verification
-        * Password encryption (using BycryptJS)
-        * Secure password enforcement
-    * Login with Session Management & Renewal
-    * Password Reset
+
+  * Secure Account Creation
+    * Email verification
+    * Password encryption (using BycryptJS)
+    * Secure password enforcement
+  * Login with Session Management & Renewal
+  * Password Reset
+
 * #### **Additional Features**
-    * Switch between dark & light color themes
-    * Switch between French & English
-    * Responsive CSS to improve tablet & mobile experience
+
+  * Switch between dark & light color themes
+  * Switch between French & English
+  * Responsive CSS to improve tablet & mobile experience
 
 &nbsp;
 
@@ -52,25 +58,18 @@ MaNaturothèque is a NextJS web app that allows consultation of the fauna & flor
 1. Ensure you have a local database `mysql://root@localhost:3306/` running, to do so :
 
     1. Install [XAMPP™](https://www.apachefriends.org/download.html)
-    2. Launch XAMPP Control Panel, turn on Apache & MySQL
+    2. Launch XAMPP Control Panel, turn on Apache & mysql
 
-2. Clone the repository in Visual Studio Code or by running `gh repo clone UUUUUwUUUUU/SAE3.01-Public`
-3. Create a new `.env` file in root, then add and complete the following
+2. Clone the repository in Visual Studio Code
 
-    ```env
-    BASE_URL="http://localhost:3000/"
-    SECRET_COOKIE_PASSWORD="..." // Can be generated using https://krenbot.github.io/pw-generator/
-    SENDINBLUE_API_KEY="..." // Need to create an account on https://www.brevo.com/
-    ```
-
-4. Install the project dependencies by running:
+3. Install the project dependencies by running:
 
     ```Shell
     npm i
      
     ```
 
-5. Run the following commands in the terminal:  
+4. Run the following commands in the terminal:  
 
     ```Shell
     npx prisma migrate dev --name init
@@ -82,24 +81,17 @@ MaNaturothèque is a NextJS web app that allows consultation of the fauna & flor
      
     ```
 
-6. Start the development server by running:
+5. Start the development server by running:
 
     ```Shell
     npm run dev
      
     ```
 
-    Or build using:
-
-    ```Shell
-    npm run launch
-     
-    ```
-
 > [!NOTE]
 > Closing Visual Studio Code will also close the npm dev server.
 
-7. Open [http://localhost:3000/](http://localhost:3000/) in your browser to access the app
+6. Open [http://localhost:3000/](http://localhost:3000/) in your browser to access the app
 
 &nbsp;
 
@@ -135,4 +127,3 @@ MaNaturothèque is a NextJS web app that allows consultation of the fauna & flor
     npm ci
      
     ```
-
