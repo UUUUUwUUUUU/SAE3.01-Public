@@ -58,18 +58,25 @@ MaNaturothèque is a NextJS web app that allows consultation of the fauna & flor
 1. Ensure you have a local database `mysql://root@localhost:3306/` running, to do so :
 
     1. Install [XAMPP™](https://www.apachefriends.org/download.html)
-    2. Launch XAMPP Control Panel, turn on Apache & mysql
+    2. Launch XAMPP Control Panel, turn on Apache & MySQL
 
-2. Clone the repository in Visual Studio Code
+2. Clone the repository in Visual Studio Code or by running `gh repo clone UUUUUwUUUUU/SAE3.01-Public`
+3. Create a new `.env` file in root, then add and complete the following
 
-3. Install the project dependencies by running:
+    ```env
+    BASE_URL="http://localhost:3000/"
+    SECRET_COOKIE_PASSWORD="..." // Can be generated using https://krenbot.github.io/pw-generator/
+    SENDINBLUE_API_KEY="..." // Need to create an account on https://www.brevo.com/
+    ```
+
+4. Install the project dependencies by running:
 
     ```Shell
     npm i
      
     ```
 
-4. Run the following commands in the terminal:  
+5. Run the following commands in the terminal:  
 
     ```Shell
     npx prisma migrate dev --name init
@@ -81,17 +88,24 @@ MaNaturothèque is a NextJS web app that allows consultation of the fauna & flor
      
     ```
 
-5. Start the development server by running:
+6. Start the development server by running:
 
     ```Shell
     npm run dev
      
     ```
 
+    Or build using:
+
+    ```Shell
+    npm run launch
+     
+    ```
+
 > [!NOTE]
 > Closing Visual Studio Code will also close the npm dev server.
 
-6. Open [http://localhost:3000/](http://localhost:3000/) in your browser to access the app
+7. Open [http://localhost:3000/](http://localhost:3000/) in your browser to access the app
 
 &nbsp;
 
