@@ -1,8 +1,3 @@
-> [!CAUTION]
-> As of the 05/23/24, TaxRef seems to have entirely modified its API, rendering this project non functional.
-
-&nbsp;
-
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
